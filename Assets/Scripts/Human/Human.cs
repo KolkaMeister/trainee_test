@@ -7,6 +7,7 @@ public class Human : MonoBehaviour,ICanTakeDamage
 {
     [SerializeField] protected Weapon currentWeapon;
     [SerializeField] protected int hp;
+    private Material material;
 
     protected Coroutine reloadRoutine;
 
@@ -14,6 +15,11 @@ public class Human : MonoBehaviour,ICanTakeDamage
 
     private Coroutine periodicDamageCoroutine;
 
+    private void Awake()
+    {
+        material = GetComponent<MeshRenderer>().material;
+        onDieEvent += StopReload;
+    }
     ///////////////// Health ////////////////////
     public void TakeDamage(int damage)
     {
@@ -55,22 +61,17 @@ public class Human : MonoBehaviour,ICanTakeDamage
     protected void Shoot()
     {
         if (reloadRoutine != null) return;
+        currentWeapon.Shoot();
         if (currentWeapon.IsEmpty)
         {
             Reload();
             return;
         }
-        currentWeapon.Shoot();
     }
     protected void SwitchWeapon(Weapon _weapon)
     {
         if (currentWeapon == _weapon) return;
-
-        if (reloadRoutine != null)
-        {
-            StopCoroutine(reloadRoutine);
-            reloadRoutine = null;
-        }
+        StopReload();
         currentWeapon.gameObject.SetActive(false);
         currentWeapon = _weapon;
         currentWeapon.gameObject.SetActive(true);
@@ -88,13 +89,23 @@ public class Human : MonoBehaviour,ICanTakeDamage
     private IEnumerator ReloadCoroutine(Weapon weapon)
     {
         var delay = Time.time + weapon.ReloadTime;
-
+        material.color = Color.yellow;
         while (Time.time < delay)
         {
             yield return null;
         }
+        material.color = Color.white;
         currentWeapon.LoadMagazine();
         yield return null;
         reloadRoutine = null;
+    }
+    private void StopReload()
+    {
+        if (reloadRoutine != null)
+        {
+        StopCoroutine(reloadRoutine);
+        reloadRoutine = null;
+        material.color = Color.white;
+        }
     }
 }

@@ -19,7 +19,7 @@ public class Player : Human
     [SerializeField] private Weapon assaultRifle;
     [SerializeField] private Weapon electroWeapon;
 
-    
+    private bool shootPressed;
     private void Start()
     {
         onDieEvent += () =>
@@ -30,12 +30,13 @@ public class Player : Human
 
     private void Update()
     {
+        AutomaticShoot();
         Move();
         RotateToMousePos();
-        if (Input.GetKey(KeyCode.Mouse0)&& currentWeapon.IsAutomatic)
-        {
-            Shoot();
-        }
+    }
+    private void AutomaticShoot()
+    {
+        if (shootPressed && currentWeapon.IsAutomatic) Shoot();
     }
     //Movement and Rotation
     private void RotateToMousePos()
@@ -73,7 +74,14 @@ public class Player : Human
         {
             Shoot();
         }
-        Debug.Log("PUE");
+        if (context.performed)
+        {
+            shootPressed = true;
+        }
+        if (context.canceled)
+        {
+            shootPressed = false;
+        }
     }
     public void ReloadPressed(InputAction.CallbackContext context)
     {

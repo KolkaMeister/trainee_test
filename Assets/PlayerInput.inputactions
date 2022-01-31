@@ -17,9 +17,9 @@
                     "name": "Shoot",
                     "type": "Value",
                     "id": "0647d393-d3b2-4ffe-9fba-b0c9f19ab349",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "",
                     "processors": "NormalizeVector2",
-                    "interactions": "Hold(duration=2)"
+                    "interactions": ""
                 },
                 {
                     "name": "Reload",
