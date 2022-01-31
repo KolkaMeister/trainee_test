@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Human : MonoBehaviour,ICanTakeDamage
 {
+    [SerializeField] private GameObject damageIdentificator;
     [SerializeField] protected Weapon currentWeapon;
     [SerializeField] protected int hp;
     private Material material;
@@ -27,7 +28,11 @@ public class Human : MonoBehaviour,ICanTakeDamage
         hp = Mathf.Max(0, hp - damage);
         if (hp <= 0) onDieEvent?.Invoke();
     }
-
+    private void TakePeriodicDamageIdentificator()
+    {
+        var instance = Instantiate(damageIdentificator, new Vector3(transform.position.x, transform.position.y+2, transform.position.z), transform.rotation, transform);
+        Destroy(instance, 0.5f);
+    }
     public void TakePeriodicDamage(float delay, int count, int damage)
     {
         if (hp <= 0) return;
@@ -45,6 +50,7 @@ public class Human : MonoBehaviour,ICanTakeDamage
         {
             yield return new WaitForSeconds(delay);
             TakeDamage(damage);
+            TakePeriodicDamageIdentificator();
         }
         periodicDamageCoroutine = null;
     }

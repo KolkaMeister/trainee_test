@@ -375,6 +375,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8551148899472931102, guid: c27f9e57d65b3104bae157629886f749,
+        type: 3}
+      propertyPath: damageIdentificator
+      value: 
+      objectReference: {fileID: 6133501405843376289, guid: 28f47ba6044312d409370b674f24a63e,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 8551148900142236691, guid: c27f9e57d65b3104bae157629886f749, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c27f9e57d65b3104bae157629886f749, type: 3}
@@ -464,6 +470,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8551148899472931102, guid: c27f9e57d65b3104bae157629886f749,
+        type: 3}
+      propertyPath: damageIdentificator
+      value: 
+      objectReference: {fileID: 6133501405843376289, guid: 28f47ba6044312d409370b674f24a63e,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 8551148900142236691, guid: c27f9e57d65b3104bae157629886f749, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c27f9e57d65b3104bae157629886f749, type: 3}
@@ -553,6 +565,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8551148899472931102, guid: c27f9e57d65b3104bae157629886f749,
+        type: 3}
+      propertyPath: damageIdentificator
+      value: 
+      objectReference: {fileID: 6133501405843376289, guid: 28f47ba6044312d409370b674f24a63e,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 8551148900142236691, guid: c27f9e57d65b3104bae157629886f749, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c27f9e57d65b3104bae157629886f749, type: 3}
@@ -1355,6 +1373,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8551148899472931102, guid: c27f9e57d65b3104bae157629886f749,
+        type: 3}
+      propertyPath: damageIdentificator
+      value: 
+      objectReference: {fileID: 6133501405843376289, guid: 28f47ba6044312d409370b674f24a63e,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 8551148900142236691, guid: c27f9e57d65b3104bae157629886f749, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c27f9e57d65b3104bae157629886f749, type: 3}
@@ -1752,6 +1776,12 @@ PrefabInstance:
       propertyPath: electroWeapon
       value: 
       objectReference: {fileID: 7345533698928288983}
+    - target: {fileID: 2299758216268598670, guid: d0a5567a735bc6e4eb552de9c489c043,
+        type: 3}
+      propertyPath: damageIdentificator
+      value: 
+      objectReference: {fileID: 6133501405843376289, guid: 28f47ba6044312d409370b674f24a63e,
+        type: 3}
     - target: {fileID: 2299758216268598671, guid: d0a5567a735bc6e4eb552de9c489c043,
         type: 3}
       propertyPath: m_ActionEvents.Array.size
@@ -1947,6 +1977,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8551148899472931102, guid: c27f9e57d65b3104bae157629886f749,
+        type: 3}
+      propertyPath: damageIdentificator
+      value: 
+      objectReference: {fileID: 6133501405843376289, guid: 28f47ba6044312d409370b674f24a63e,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 8551148900142236691, guid: c27f9e57d65b3104bae157629886f749, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c27f9e57d65b3104bae157629886f749, type: 3}
