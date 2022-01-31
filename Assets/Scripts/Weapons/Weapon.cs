@@ -10,12 +10,14 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] protected Cooldown fireRateCooldown;
     [SerializeField] protected float spreadValue;
     [SerializeField] protected float force;
+    [SerializeField] protected bool isAutomatic;
     [SerializeField] protected Bullet bullet;
     public float ReloadTime => reloadTime;
     public bool IsMagazineFull => bulletsInMagazine >= magazineSize;
 
     public bool IsEmpty => bulletsInMagazine <= 0;
 
+    public bool IsAutomatic => isAutomatic;
     public Cooldown FireRateCooldown => fireRateCooldown;
 
     public abstract void Shoot();

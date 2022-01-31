@@ -206,10 +206,10 @@ MonoBehaviour:
   magazineSize: 30
   reloadTime: 4
   bulletsInMagazine: 30
-  automatic: 1
   fireRateCooldown:
     cooldownTime: 0.1
   spreadValue: 10
   force: 10
+  isAutomatic: 1
   bullet: {fileID: 8164401801416204663, guid: 54e68f1c8f1f94b4fb504c7cf4b7c3c5, type: 3}
   bulletSpawnPoint: {fileID: 7345533699818767656}

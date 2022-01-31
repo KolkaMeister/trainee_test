@@ -32,6 +32,10 @@ public class Player : Human
     {
         Move();
         RotateToMousePos();
+        if (Input.GetKey(KeyCode.Mouse0)&& currentWeapon.IsAutomatic)
+        {
+            Shoot();
+        }
     }
     //Movement and Rotation
     private void RotateToMousePos()
@@ -69,7 +73,7 @@ public class Player : Human
         {
             Shoot();
         }
-
+        Debug.Log("PUE");
     }
     public void ReloadPressed(InputAction.CallbackContext context)
     {
